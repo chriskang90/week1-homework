@@ -1,3 +1,6 @@
+# Name: Jaeyoung Christopher Kang
+# Web Development Homework 1
+
 # Require Ruby libraries
 require 'open-uri'
 require 'json'
@@ -18,17 +21,24 @@ json_data = open(url).read
 # (You will need to figure out what kind of structure it is)
 data = JSON.parse(json_data)
 
-
 # 1. TO DO:
 # Replace the following 0 with an expression that will retrieve the total travel time
-total_time = 0
+
+# NOTES
+# data.class is hash
+# Extract routes, then the first element of the array, then legs, then first element of that array, and finally duration and text
+total_time = data["routes"][0]["legs"][0]["duration"]["text"]
 
 # Output the total drive time to the screen
 puts "Total travel time driving: #{total_time}"
 
 # 2. TO DO:
 # Replace the following 0 with an expression that will retrieve the total distance
-total_distance = 0
+
+# NOTES
+# data.class is hash
+# Extract routes, then the first element of the array, then legs, then first element of that array, and finally distance and text
+total_distance = data["routes"][0]["legs"][0]["distance"]["text"]
 
 # Output the total distance to the screen
 puts "Total distance traveled: #{total_distance}"

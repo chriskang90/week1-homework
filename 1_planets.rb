@@ -1,3 +1,8 @@
+# Name: Jaeyoung Christopher Kang
+# Web Development Homework 1
+# References
+# Lecture: ruby_arrays.rb 
+
 planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Saturn', 'Jupiter', 'Uranus', 'Neptune']
 
 # 1. TO DO:
@@ -19,3 +24,9 @@ planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Saturn', 'Jupiter', 'Uranus', '
 #
 # Your code goes here:
 #
+# Use the iterator pattern with incrementing index
+index = 0
+planets.each do |planet|
+	index = index + 1
+	puts "Planet #{index}: #{planet}"
+end

@@ -1,3 +1,6 @@
+# Name: Jaeyoung Christopher Kang
+# Web Development Homework 1
+
 # Activate some helpful built-in Ruby libraries
 require 'open-uri'
 require 'json'
@@ -18,8 +21,12 @@ data = JSON.parse(json_data)
 # TO DO:
 # Replace the following 0's with expressions
 # that will extract the latitude and longitude
-latitude = 0
-longitude = 0
+
+# NOTES:
+# data.class is hash
+# Extract array from results, then the first element of the array (i.e. the only element), then extract geometry, location, and finally lat and lng
+latitude = data["results"][0]["geometry"]["location"]["lat"]
+longitude = data["results"][0]["geometry"]["location"]["lng"]
 
 # Output latitude and longitude to the screen
 puts "Latitude: #{latitude}"
